@@ -1,0 +1,17 @@
+
+@import "keep-react/src/main.min.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+/* https://pretzels-store-demo.myshopify.com/ */
+/* https://pretzels-store-demo.myshopify.com/ */
+ 
+
+.bg{
+    border-radius: 0px 100px 0px 100px;
+    border-color: rgb(247, 178, 153);
+}

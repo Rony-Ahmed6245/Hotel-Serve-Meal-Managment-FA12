@@ -1,0 +1,36 @@
+[
+    {
+        "_id": 1,
+        "price": 110,
+        "keyf1": "Flexible Meal Plans",
+        "keyf2": "Weekly Menu Rotation",
+        "keyf3": "Convenient Delivery",
+        "keyf4": "Nutritional Information",
+        "keyf5": "Community Engagement",
+        "badge": "Selver"
+    },
+    {
+        "_id": 2,
+        "price": 115,
+        "keyf1": "Flexible Meal Plans",
+        "keyf2": "Weekly Menu Rotation",
+        "keyf3": "Convenient Delivery",
+        "keyf4": "Nutritional Information",
+        "keyf5": "Community Engagement",
+        "keyf6": "Member Rewards",
+        "badge": "Gold"
+    },
+    {
+        "_id": 3,
+        "price": 120,
+        "keyf1": "Flexible Meal Plans",
+        "keyf2": "Weekly Menu Rotation",
+        "keyf3": "Convenient Delivery",
+        "keyf4": "Nutritional Information",
+        "keyf5": "Community Engagement",
+        "keyf6": "Member Rewards",
+        "keyf7": "Special Occasion Meals",
+        "keyf8": "Health and Wellness Resources",
+        "badge": "Platinum"
+    }
+]
