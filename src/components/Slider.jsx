@@ -17,7 +17,7 @@ const Slider = () => {
     return (
         <div className="max-w-7xl mx-auto my-20">
             <Title heading={'Daily Meal'}></Title>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <Carousel
                     showControls={false}
                     indicatorsType="ring"

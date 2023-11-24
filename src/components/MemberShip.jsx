@@ -22,8 +22,8 @@ const MemberShip = () => {
 
 
     return (
-        <div className='my-20'>
-            <Title heading={'Membership'}></Title>
+        <div className='my-32'>
+            <Title heading={'Membership Package'}></Title>
             <div className="md:flex my-10 justify-center items-center max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-3 px-2 gap-4">
                     

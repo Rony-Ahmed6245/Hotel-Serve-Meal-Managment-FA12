@@ -29,35 +29,36 @@ const Mainlayout = () => {
     }
 
     const menu = <>
-        <div className="flex justify-center items-center">
-            <li className="text-orange-500"><NavLink to='/' className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? " text-black" : ""
-            }><IoHomeOutline />
-                Home</NavLink></li>
-            <li className="text-orange-500"><NavLink to='/meals' className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? " text-black" : ""
-            }><GiMeal />Meals</NavLink></li>
-            <li className="text-orange-500"><NavLink to='/upcommingMeals' className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? " text-black" : ""
-            }><GiHotMeal />
-                Upcomming Meals</NavLink></li>
-            <li className="text-orange-500"><NavLink to='/notificaton' className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "  text-black" : ""
-            }><MdOutlineTextsms />Notification</NavLink></li>
-            <li className="text-orange-500"><NavLink to='/dashboard' className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "  text-black" : ""
-            }><MdOutlineDashboard />Dashboard
-            </NavLink></li>
 
-            {/* login logout  */}
+        <li className="text-orange-500"><NavLink to='/' className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " text-black" : ""
+        }><IoHomeOutline />
+            Home</NavLink></li>
+        <li className="text-orange-500"><NavLink to='/meals' className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " text-black" : ""
+        }><GiMeal />Meals</NavLink></li>
+        <li className="text-orange-500"><NavLink to='/upcommingMeals' className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " text-black" : ""
+        }><GiHotMeal />
+            Upcomming Meals</NavLink></li>
+        <li className="text-orange-500"><NavLink to='/notificaton' className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "  text-black" : ""
+        }><MdOutlineTextsms />Notification</NavLink></li>
+        <li className="text-orange-500"><NavLink to='/dashboard' className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "  text-black" : ""
+        }><MdOutlineDashboard />Dashboard
+        </NavLink></li>
 
-
+        {/* login logout  */}
 
 
 
 
-            {/* condition user profile  */}
 
+
+        {/* condition user profile  */}
+
+        <li>
             {
                 user ? <>
                     <li className="relative">
@@ -102,10 +103,11 @@ const Mainlayout = () => {
                     </li>
                 </>
             }
+        </li>
 
 
 
-        </div>
+
 
     </>
 
@@ -118,16 +120,16 @@ const Mainlayout = () => {
                 <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col">
                     {/* Navbar */}
-                    <div className="w-full navbar rounded-full mt-2 fixed z-10  py-4 px-8 bg-white  ">
+                    <div className="  navbar rounded-full mt-2 fixed z-10  bg-white  ">
                         <div className="flex-none lg:hidden">
                             <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                             </label>
                         </div>
-                        <div className="flex-1 px-2 mx-2 text-2xl "><PiBowlFoodLight className="text-4xl text-orange-600" />
+                        <div className="flex-1 px-2  text-2xl "><PiBowlFoodLight className="text-4xl text-orange-600" />
                             Serve <span className="text-4xl font-bold ">M</span>eaL</div>
                         <div className="flex-none hidden lg:block">
-                            <ul className="menu menu-horizontal">
+                            <ul className="menu menu-horizontal flex justify-center items-center">
                                 {/* Navbar menu content here */}
                                 {
                                     menu
@@ -140,7 +142,7 @@ const Mainlayout = () => {
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-2/3 min-h-full bg-white mt-20">
+                    <ul className="menu p-4 w-2/3 min-h-full -ml-2 bg-white mt-20">
                         {/* Sidebar content here */}
                         {menu}
                     </ul>

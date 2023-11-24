@@ -12,16 +12,11 @@ const MembershipCard = ({ item }) => {
             <Card className="max-w-xs p-6 bg bg-base-200 hover:shadow-md transition-all">
                 <Card.Container>
                     <Card.Container className="h-[60px] w-[60px]  bg-primary-25 flex items-center justify-center rounded-full">
-                        <div className="flex gap-2 text-3xl text-orange-600 pl-10">
-                            <SlBadge />
-                            <SlBadge />
-                            <SlBadge />
-                        </div>
-
+                       
                     </Card.Container>
                     <Card.Container>
-                        <Card.Title className="text-body-2 font-medium text-primary-500">
-                            {badge}
+                        <Card.Title className=" flex justify-start gap-3 text-3xl items-center font-medium text-primary-500">
+                        <SlBadge />{badge}
                         </Card.Title>
                         <Card.Title className="flex items-center my-3">
                             <span className="text-heading-4 font-bold text-metal-800">${price}</span>
@@ -37,25 +32,25 @@ const MembershipCard = ({ item }) => {
                     </Card.Container>
                     <Card.Container tag="ul" className="my-4 space-y-">
                         <Card.List className="flex items-center gap-1.5">
-                            <CheckCircle size={24} color="#1B4DFF" />
+                            <CheckCircle size={24} color="#EA580C" />
                             <span className="text-body-4 text-metal-700">
                                 {keyf1}
                             </span>
                         </Card.List>
                         <Card.List className="flex items-center gap-1.5">
-                            <CheckCircle size={24} color="#1B4DFF" />
+                            <CheckCircle size={24} color="#EA580C" />
                             <span className="text-body-4 text-metal-700">
                                 {keyf2}
                             </span>
                         </Card.List>
                         <Card.List className="flex items-center gap-1.5">
-                            <CheckCircle size={24} color="#1B4DFF" />
+                            <CheckCircle size={24} color="#EA580C" />
                             <span className="text-body-4 text-metal-700">
                                 {keyf3}
                             </span>
                         </Card.List>
                         <Card.List className="flex items-center gap-1.5">
-                            <CheckCircle size={24} color="#1B4DFF" />
+                            <CheckCircle size={24} color="#EA580C" />
                             <span className="text-body-4 text-metal-700">
                                 {keyf4}
                             </span>

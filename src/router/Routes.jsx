@@ -20,6 +20,7 @@ import ServeMeals from "../pages/ServeMeals";
 import UpcomingMeals from "../pages/UpcomingMeals";
 import Payment from "../pages/Payment";
 import DashboardHome from "../pages/DashboardHome";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -47,7 +48,7 @@ export const Routes = createBrowserRouter([
             },
             {
                 path: '/payment/:id',
-                element: <Payment></Payment>,
+                element:<PrivateRoute><Payment></Payment></PrivateRoute> ,
                 
             }
         ]
