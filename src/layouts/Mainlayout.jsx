@@ -84,7 +84,7 @@ const Mainlayout = () => {
                                 <li className="text-orange-500">
                                     <span className="font-semibold">{user?.displayName ? user.displayName : "MR. XYZ"}</span>
                                 </li>
-                                <li className=" border rounded text-white bg-orange-600 "><NavLink onClick={handelLogout} className={({ isActive, isPending }) =>
+                                <li className=" border rounded btn btn-sm flex justify-center items-center text-white bg-orange-600 "><NavLink onClick={handelLogout} className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "  " : ""
                                 }><IoMdLogIn />Logout
                                 </NavLink>
@@ -96,7 +96,7 @@ const Mainlayout = () => {
 
 
                 </> : <>
-                    <li className="text-white border rounded bg-orange-600"><NavLink to='/login' className={({ isActive, isPending }) =>
+                    <li className="text-white btn btn-sm flex justify-center items-center border rounded bg-orange-600"><NavLink to='/login' className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "  text-black" : ""
                     }><IoMdLogIn />Join
                     </NavLink>
@@ -127,7 +127,7 @@ const Mainlayout = () => {
                             </label>
                         </div>
                         <div className="flex-1 px-2  text-2xl "><PiBowlFoodLight className="text-4xl text-orange-600" />
-                            Serve <span className="text-4xl font-bold ">M</span>eaL</div>
+                            Serve <span className="text-4xl font-bold text-orange-600">M</span>eaL</div>
                         <div className="flex-none hidden lg:block">
                             <ul className="menu menu-horizontal flex justify-center items-center">
                                 {/* Navbar menu content here */}
