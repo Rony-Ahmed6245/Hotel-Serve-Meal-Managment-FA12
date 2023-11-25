@@ -47,9 +47,9 @@ const AdminProfile = () => {
                 imgSize="md"
                 className="">
                 <Card.Container className="absolute right-3.5 top-3.5 flex  cursor-pointer items-center justify-center rounded-full text-2xl">
-                    <FcLike />
+                <Card.Title className="   ">{user?user.email:"xyz@gmail.com"}</Card.Title> <FcLike />
                 </Card.Container>
-                <Card.Container className="flex flex-col items-start ml-10 justify-center">
+                <Card.Container className="flex flex-col items-start px-4 justify-center">
                     <Card.Container className="absolute top-32  rounded-full ring-4 ring-white ring-offset-0">
 
                         <Avatar size="2xl" shape="circle" img={user?.photoURL} />
@@ -59,8 +59,10 @@ const AdminProfile = () => {
                             user ? user.displayName : 'MR. XYZ'
                         }</Card.Title>
                         <Card.Title className="   text-sm text-orange-600 font-semibold flex justify-center items-center gap-1"><MdOutlineAdminPanelSettings />Admin</Card.Title>
+                        
                     </Card.Container>
-                 
+                    <div className="divider"></div>
+                 <h1 className="text-xl pb-4">Total Added Meals: 00 </h1>
                 </Card.Container>
             </Card>
             <div className="grid grid-cols-1 mt-5 md:grid-cols-2 justify-center items-center gap-4">

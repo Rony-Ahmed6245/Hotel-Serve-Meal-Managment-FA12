@@ -33,6 +33,7 @@ export const Routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
+                loader: () => fetch("http://localhost:5000/v1/paymentCard"),
             },
             {
                 path: '/meals',
@@ -63,7 +64,7 @@ export const Routes = createBrowserRouter([
     },
     {
         path: '/dashboard',
-        element: <Dashboard></Dashboard>,
+        element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute> ,
         children: [
         //    user profile routes
         {

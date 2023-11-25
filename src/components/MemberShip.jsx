@@ -1,20 +1,23 @@
 
 
 import Title from "./Title";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import MembershipCard from "./MembershipCard";
+import { useLoaderData } from "react-router-dom";
 
 
 const MemberShip = () => {
-    const [data, setData] = useState([]);
+    // const [data, setData] = useState([]);
     // console.log(data);
+    const data = useLoaderData([]);
+    console.log(data);
 
-    useEffect(() => {
-        fetch("../../public/membership.json")
-        .then(res=> res.json())
-        .then(data=>setData(data))
+    // useEffect(() => {
+    //     fetch("../../public/membership.json")
+    //     .then(res=> res.json())
+    //     .then(data=>setData(data))
 
-    }, [])
+    // }, [])
 
 
 

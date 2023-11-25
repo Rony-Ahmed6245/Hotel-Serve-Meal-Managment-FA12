@@ -1,3 +1,4 @@
+import { useLoaderData } from "react-router-dom";
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 
@@ -10,6 +11,8 @@ import Slider from "../components/Slider";
 
 
 const Home = () => {
+    const data = useLoaderData();
+    console.log(data);
     return (
         <div>
             <Banner></Banner>
