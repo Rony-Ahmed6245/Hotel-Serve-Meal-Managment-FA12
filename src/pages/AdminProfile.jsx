@@ -1,5 +1,5 @@
 import { Avatar, Card } from "keep-react";
-import banner from "../assets/ba30.webp"
+import banner from "../assets/pexels-miguel-á-padriñán-255377.jpg"
 import { FcLike } from "react-icons/fc";
 import { AuthContext } from "../provider/AuthProvider";
 import { useContext } from "react";

@@ -29,23 +29,23 @@ const Dashboard = () => {
 
 
     const dashboardMenu = <>
-    <li className='text-orange-500'><NavLink to='/' className={({ isActive, isPending }) =>
+    <li className=' md:text-white text-orange-500'><NavLink to='/' className={({ isActive, isPending }) =>
         isPending ? "pending" : isActive ? "underline" : ""
     }><IoHomeOutline />
         Go Home</NavLink></li>
     <div className="divider"></div>
     {
-        user ? <> <h1 className="text-md font-semibold text-center">User Dashboard</h1>
-        <li className='text-orange-500'><NavLink to='/dashboard/userProfile' className={({ isActive, isPending }) =>
+        user ? <> <h1 className="text-lg underline font-semibold text-white text-center">User Dashboard</h1>
+        <li className=' md:text-white text-orange-500'><NavLink to='/dashboard/userProfile' className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "underline" : ""
         }><CgProfile />
             My Profile</NavLink></li>
-        <li className='text-orange-500'><NavLink to='/dashboard/requestedMeals' className={({ isActive, isPending }) =>
+        <li className=' md:text-white text-orange-500'><NavLink to='/dashboard/requestedMeals' className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "underline" : ""
         }> <VscGitPullRequestNewChanges />
             Requested Meals
         </NavLink></li>
-        <li className='text-orange-500'><NavLink to='/dashboard/myReviews' className={({ isActive, isPending }) =>
+        <li className=' md:text-white text-orange-500'><NavLink to='/dashboard/myReviews' className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "underline" : ""
         }><MdReviews />
             My Reviews</NavLink></li>
@@ -55,36 +55,37 @@ const Dashboard = () => {
 
 
     {/* admin dashboard  */}
-    <h1 className="text-md font-semibold text-center">Admin Dashboard</h1>
-    <li className='text-orange-500'><NavLink to='/dashboard/adminProfile' className={({ isActive, isPending }) =>
+    <h1 className="text-lg underline font-semibold md:text-white text-orange-500 text-center">Admin Dashboard</h1>
+    <li className=' md:text-white text-orange-500'><NavLink to='/dashboard/adminProfile' className={({ isActive, isPending }) =>
         isPending ? "pending" : isActive ? "underline" : ""
     }><RiAdminLine />
         Admin Profile</NavLink></li>
-    <li className='text-orange-500'><NavLink to='/dashboard/manageUsers' className={({ isActive, isPending }) =>
+       
+    <li className=' md:text-white text-orange-500'><NavLink to='/dashboard/manageUsers' className={({ isActive, isPending }) =>
         isPending ? "pending" : isActive ? "underline" : ""
     }><MdManageAccounts />
-        Manage Users</NavLink></li>
-    <li className='text-orange-500'><NavLink to='/dashboard/addMeal' className={({ isActive, isPending }) =>
+        Manage Users</NavLink></ li>
+    <li className=' text-white'><NavLink to='/dashboard/addMeal' className={({ isActive, isPending }) =>
         isPending ? "pending" : isActive ? "underline" : ""
     }><IoMdAddCircleOutline />
         Add meal</NavLink></li>
-    <li className='text-orange-500'><NavLink to='/dashboard/allMeals' className={({ isActive, isPending }) =>
+    <li className=' md:text-white text-orange-500'><NavLink to='/dashboard/allMeals' className={({ isActive, isPending }) =>
         isPending ? "pending" : isActive ? "underline" : ""
     }><SiVirustotal />
         All meals</NavLink></li>
-    <li className='text-orange-500'><NavLink to='/dashboard/allReviews' className={({ isActive, isPending }) =>
+    <li className=' md:text-white text-orange-500'><NavLink to='/dashboard/allReviews' className={({ isActive, isPending }) =>
         isPending ? "pending" : isActive ? "underline" : ""
     }><MdPreview />
         All reviews</NavLink></li>
-    <li className='text-orange-500'><NavLink to='/dashboard/serveMeals' className={({ isActive, isPending }) =>
+    <li className=' md:text-white text-orange-500'><NavLink to='/dashboard/serveMeals' className={({ isActive, isPending }) =>
         isPending ? "pending" : isActive ? "underline" : ""
     }><GiFoodTruck />
         Serve meals</NavLink></li>
-    <li className='text-orange-500'><NavLink to='/dashboard/upcomingMeals' className={({ isActive, isPending }) =>
+    <li className=' md:text-white text-orange-500'><NavLink to='/dashboard/upcomingMeals' className={({ isActive, isPending }) =>
         isPending ? "pending" : isActive ? "underline" : ""
     }><PiBowlFoodLight />
         Upcoming meals</NavLink></li>
-    <li className='text-orange-500'><NavLink to='/dashboard' className={({ isActive, isPending }) =>
+    <li className=' md:text-white text-orange-500'><NavLink to='/dashboard' className={({ isActive, isPending }) =>
         isPending ? "pending" : isActive ? "underline" : ""
     }><IoSettingsOutline />
         Analysis</NavLink></li>
@@ -106,7 +107,7 @@ const Dashboard = () => {
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-                    <ul className="menu p-4 md:w-80 w-3/4 min-h-full md:bg-base-200 bg-white text-base-content">
+                    <ul className="menu p-4 md:w-80 z-30 w-3/4 min-h-full md:bg-orange-600 bg-white text-base-content">
                         {/* Sidebar content here */}
                         {
                             dashboardMenu

@@ -46,10 +46,10 @@ const UserProfile = () => {
           </Card.Container>
           <Card.Container className="text-center">
             <Card.Title className="text-body-5 !font-normal text-metal-400 md:text-body-5 md:!font-medium">
-            USER ID: {user.uid}
+            USER ID: {user?.uid}
             </Card.Title>
             <Card.Title className="text-body-5 !font-normal text-metal-400 md:text-body-5 md:!font-medium">
-            USER Email: {user.email}
+            USER Email: {user?.email}
             </Card.Title>
             
           </Card.Container>
