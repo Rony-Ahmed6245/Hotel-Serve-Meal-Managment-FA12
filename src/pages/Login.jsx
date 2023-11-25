@@ -7,6 +7,8 @@ import { useState } from "react";
 import swal from 'sweetalert';
 
 import { AuthContext } from "../provider/AuthProvider";
+import { CiLogin } from "react-icons/ci";
+import { IoHomeOutline } from "react-icons/io5";
 
 
 
@@ -59,24 +61,25 @@ const Login = () => {
     }
 
     return (
-        <div>
-            <div className=" max-w-7xl mx-auto">
+        <div className="bg-gradient-to-r  from-amber-300 via-orange-500 to-orange-600  h-screen h-100vh">
+            <div className=" max-w-xl mx-auto pt-5">
                 {/* dynamic title */}
               
                 {/* <img src={img2} alt="" /> */}
-                <h1 className="text-4xl font-extrabold text-center my-8 text-[#0DBC95]">LOGIN</h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 p-4 justify-center items-center">
+             
+              
 
-                    <div className=" rounded-lg py-5">
-                        <h1 className="text-2xl font-bold text-[#0DBC95] mt-4 text-center">Please Login & Access Find Jobs </h1>
+                    <div className=" rounded-lg py-5 border blr form-container ">
+                           <h1 className="text-4xl font-extrabold text-center  text-white">LOGIN</h1>
+                       
                         <form onSubmit={handelSignIn} className="card-body px-4 ">
-                            <div className="form-control">
+                            <div className="form-control form-group">
                                 <input type="text" name="name" placeholder="Name" className=" w-full py-2 px-4  border-b-2 border-[#0DBC95] rounded outline-none " required />
                             </div>
-                            <div className="form-control">
+                            <div className="form-control form-group">
                                 <input type="email" name="email" placeholder="Email" className=" w-full py-2 px-4  border-b-2 border-[#0DBC95] rounded outline-none my-4" required />
                             </div>
-                            <div className="form-control">
+                            <div className="form-control form-group">
                                 <input type="password" name="password" placeholder="Password" className=" w-full py-2 px-4  border-b-2 border-[#0DBC95] rounded outline-none" required />
                             </div>
                             <h1 className="text-sm p-2">Forget Password</h1>
@@ -98,12 +101,17 @@ const Login = () => {
                                     </div>
                                 )
                             }
-                            <div className="flex justify-center">
-                                <button className="py-2 px-20 hover:bg-[#0DBC95] border-[#0DBC95] border-2 outline-none transition rounded-full  hover:text-white">Login</button>
+                           <div className="flex justify-around item-center">
+                           <div className="flex justify-center">
+                                <button className="py-2 px-20 hover:bg-orange-600 border-white border-2  text-white font-bold outline-none transition rounded-full  hover:text-white flex justify-center items-center gap-2"><CiLogin />Login</button>
                             </div>
+                            <div className="flex justify-center">
+                                <Link to={'/'} className="py-2 px-20 hover:bg-orange-600 border-white border-2  text-white font-bold outline-none transition rounded-full flex justify-center items-center gap-2 hover:text-white"><IoHomeOutline />Go home</Link>
+                            </div>
+                           </div>
 
                         </form>
-                        <h2 className="text-center text-lg font-semibold">Not a member ? Please <Link to='/register' className="text-[#0DBC95] underline">Register</Link> </h2>
+                        <h2 className="text-center text-lg font-semibold">Not a member ? Please <Link to='/register' className="text-white underline text-blue-400">Register</Link> </h2>
                         <h4 className="text-md text-center">OR</h4>
                         <div className="flex justify-center ">
                             <div onClick={handelGoogleSignIn} className="cursor-pointer flex items-center my-2 gap-3 justify-center w-[250px] border p-2 rounded-full">
@@ -112,10 +120,8 @@ const Login = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex justify-center">
-                        {/* <img src={img1} className=" " /> */}
-                    </div>
-                </div>
+                  
+                
             </div>
         </div>
     );

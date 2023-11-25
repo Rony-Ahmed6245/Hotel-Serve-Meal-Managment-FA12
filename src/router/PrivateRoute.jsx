@@ -2,6 +2,7 @@ import {  useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { Navigate, useLocation } from "react-router-dom";
 import Swal from "sweetalert2";
+import Loading from "../components/Loading";
 
 
 const PrivateRoute = ({children }) => {
@@ -11,9 +12,7 @@ const PrivateRoute = ({children }) => {
 
     if (loading) {
         return (
-            <div className="flex justify-center items-center">
-                <span className="loading loading-spinner text-warning"></span>
-            </div>
+            <Loading></Loading>
         );
     }
 

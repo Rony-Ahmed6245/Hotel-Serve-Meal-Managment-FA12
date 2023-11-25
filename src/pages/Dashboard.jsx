@@ -11,6 +11,9 @@ import { MdPreview } from "react-icons/md";
 import { GiFoodTruck } from "react-icons/gi";
 import { PiBowlFoodLight } from "react-icons/pi";
 import { CgMenuRound } from "react-icons/cg";
+import { IoSettingsOutline } from "react-icons/io5";
+import { AuthContext } from "../provider/AuthProvider";
+import { useContext } from "react";
 
 
 
@@ -18,30 +21,38 @@ import { CgMenuRound } from "react-icons/cg";
 
 
 
-const dashboardMenu = <>
+
+
+
+const Dashboard = () => {
+    const { user } = useContext(AuthContext)
+
+
+    const dashboardMenu = <>
     <li className='text-orange-500'><NavLink to='/' className={({ isActive, isPending }) =>
         isPending ? "pending" : isActive ? "underline" : ""
     }><IoHomeOutline />
         Go Home</NavLink></li>
     <div className="divider"></div>
+    {
+        user ? <> <h1 className="text-md font-semibold text-center">User Dashboard</h1>
+        <li className='text-orange-500'><NavLink to='/dashboard/userProfile' className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "underline" : ""
+        }><CgProfile />
+            My Profile</NavLink></li>
+        <li className='text-orange-500'><NavLink to='/dashboard/requestedMeals' className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "underline" : ""
+        }> <VscGitPullRequestNewChanges />
+            Requested Meals
+        </NavLink></li>
+        <li className='text-orange-500'><NavLink to='/dashboard/myReviews' className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "underline" : ""
+        }><MdReviews />
+            My Reviews</NavLink></li>
+        <div className="divider"></div></> : <></>
+    }
+    {/* user dashboard  */}
 
-
-    {/* user dash board  */}
-    <h1 className="text-md font-semibold text-center">User Dashboard</h1>
-    <li className='text-orange-500'><NavLink to='/dashboard/userProfile' className={({ isActive, isPending }) =>
-        isPending ? "pending" : isActive ? "underline" : ""
-    }><CgProfile />
-        My Profile</NavLink></li>
-    <li className='text-orange-500'><NavLink to='/dashboard/requestedMeals' className={({ isActive, isPending }) =>
-        isPending ? "pending" : isActive ? "underline" : ""
-    }> <VscGitPullRequestNewChanges />
-        Requested Meals
-    </NavLink></li>
-    <li className='text-orange-500'><NavLink to='/dashboard/myReviews' className={({ isActive, isPending }) =>
-        isPending ? "pending" : isActive ? "underline" : ""
-    }><MdReviews />
-        My Reviews</NavLink></li>
-    <div className="divider"></div>
 
     {/* admin dashboard  */}
     <h1 className="text-md font-semibold text-center">Admin Dashboard</h1>
@@ -73,11 +84,15 @@ const dashboardMenu = <>
         isPending ? "pending" : isActive ? "underline" : ""
     }><PiBowlFoodLight />
         Upcoming meals</NavLink></li>
-
+    <li className='text-orange-500'><NavLink to='/dashboard' className={({ isActive, isPending }) =>
+        isPending ? "pending" : isActive ? "underline" : ""
+    }><IoSettingsOutline />
+        Analysis</NavLink></li>
 
 </>
 
-const Dashboard = () => {
+
+
     return (
         <div>
             <div className="drawer lg:drawer-open">

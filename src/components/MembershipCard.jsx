@@ -9,7 +9,7 @@ const MembershipCard = ({ item }) => {
     const { _id, price, badge, keyf1, keyf2, keyf3, keyf4, keyf5, keyf6, keyf7, keyf8 } = item || {};
     return (
         <div>
-            <Card className="max-w-xs p-6 bg bg-base-200 hover:shadow-md transition-all">
+            <Card className="max-w-xs p-6 bg bg-base-200 hover:shadow-md transition-all ">
                 <Card.Container>
                     <Card.Container className="h-[60px] w-[60px]  bg-primary-25 flex items-center justify-center rounded-full">
                        

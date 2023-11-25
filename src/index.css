@@ -1,4 +1,3 @@
-
 @import "keep-react/src/main.min.css";
 @tailwind base;
 @tailwind components;
@@ -9,9 +8,332 @@
 
 /* https://pretzels-store-demo.myshopify.com/ */
 /* https://pretzels-store-demo.myshopify.com/ */
- 
 
-.bg{
+
+.bg {
     border-radius: 0px 100px 0px 100px;
     /* border-color: rgb(247, 178, 153); */
 }
+
+
+.blr {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
+.button1 {
+    
+    border: 2px solid #FA8D41;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #FA8D41;
+   }
+   
+   .button1::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(20deg);
+    background: #FA8D41;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+   }
+   
+   .button1:hover::before {
+    width: 105%;
+
+   }
+   
+   .button1:hover {
+    color: #fff;
+   }
+
+
+   /* from  */
+   .form-container {
+   
+    background: linear-gradient(#212121, #212121) padding-box,
+                linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+    border: 2px solid transparent;
+    padding: 32px 24px;
+    font-size: 14px;
+    font-family: inherit;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background-size: 200% 100%;
+    animation: gradient 5s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .form-container button:active {
+    scale: 0.95;
+  }
+  
+  .form-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .form-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #717171;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  
+  .form-container .form-group input {
+    
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #fff;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid #414141;
+  }
+  
+  .form-container .form-group textarea {
+  
+    padding: 12px 16px;
+    border-radius: 8px;
+    resize: none;
+    color: #fff;
+    height: 96px;
+    border: 1px solid #414141;
+    background-color: transparent;
+    font-family: inherit;
+  }
+  
+  .form-container .form-group input::placeholder {
+    opacity: 0.5;
+  }
+  
+  .form-container .form-group input:focus {
+    outline: none;
+    border-color: #e81cff;
+  }
+  
+  .form-container .form-group textarea:focus {
+    outline: none;
+    border-color: #e81cff;
+  }
+  
+  .form-container .form-submit-btn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: flex-start;
+    font-family: inherit;
+    color: #717171;
+    font-weight: 600;
+    width: 40%;
+    background: #313131;
+    border: 1px solid #414141;
+    padding: 12px 16px;
+    font-size: inherit;
+    gap: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  
+  .form-container .form-submit-btn:hover {
+    background-color: #fff;
+    border-color: #fff;
+  }
+  
+
+  /* payment card  */
+
+  .flip-card {
+    background-color: transparent;
+    width: 240px;
+    height: 154px;
+    perspective: 1000px;
+    color: white;
+  }
+  
+  .heading_8264 {
+    position: absolute;
+    letter-spacing: .2em;
+    font-size: 0.5em;
+    top: 2em;
+    left: 18.6em;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 6.8em;
+    left: 11.7em;
+  }
+  
+  .chip {
+    position: absolute;
+    top: 2.3em;
+    left: 1.5em;
+  }
+  
+  .contactless {
+    position: absolute;
+    top: 3.5em;
+    left: 12.4em;
+  }
+  
+  .number {
+    position: absolute;
+    font-weight: bold;
+    font-size: .6em;
+    top: 8.3em;
+    left: 1.6em;
+  }
+  
+  .valid_thru {
+    position: absolute;
+    font-weight: bold;
+    top: 635.8em;
+    font-size: .01em;
+    left: 140.3em;
+  }
+  
+  .date_8264 {
+    position: absolute;
+    font-weight: bold;
+    font-size: 0.5em;
+    top: 13.6em;
+    left: 3.2em;
+  }
+  
+  .name {
+    position: absolute;
+    font-weight: bold;
+    font-size: 0.5em;
+    top: 16.1em;
+    left: 2em;
+  }
+  
+  .strip {
+    position: absolute;
+    background-color: black;
+    width: 15em;
+    height: 1.5em;
+    top: 2.4em;
+    background: repeating-linear-gradient(
+      45deg,
+      #303030,
+      #303030 10px,
+      #202020 10px,
+      #202020 20px
+    );
+  }
+  
+  .mstrip {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 8em;
+    height: 0.8em;
+    top: 5em;
+    left: .8em;
+    border-radius: 2.5px;
+  }
+  
+  .sstrip {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 4.1em;
+    height: 0.8em;
+    top: 5em;
+    left: 10em;
+    border-radius: 2.5px;
+  }
+  
+  .code {
+    font-weight: bold;
+    text-align: center;
+    margin: .2em;
+    color: black;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+  }
+  
+  .flip-card-front {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 2px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+    background-color: #171717;
+  }
+  
+  .flip-card-back {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 2px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+    background-color: #171717;
+    transform: rotateY(180deg);
+  }
+  
+
+
+  /* user profile card  */
+
+  
+  
+  

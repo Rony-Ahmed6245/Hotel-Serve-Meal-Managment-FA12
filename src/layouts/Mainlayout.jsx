@@ -11,22 +11,44 @@ import { Avatar } from "keep-react";
 import { CgProfile } from "react-icons/cg";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
+import swal from "sweetalert";
+import Swal from "sweetalert2";
+
 
 const Mainlayout = () => {
     const [showDropdown, setShowDropdown] = useState(false);
     const { user, logOut } = useContext(AuthContext)
 
     const handelLogout = () => {
-        logOut()
-            .then(result => {
-                // console.log(result);
-                swal("Success", "Logout successfully", "success")
-                return
-            })
-            .catch(err => {
-                swal("Error", "Logout not successfully", "Error")
-            })
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be logout!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, Logout"
+        })
+        .then(result => {
+            if (result.isConfirmed) {
+                return logOut();
+            } else {
+                // The user clicked the cancel button
+                throw new Error('Logout canceled');
+            }
+        })
+        .then(() => {
+            Swal.fire({
+                title: "Logged Out!",
+                text: "You have been successfully logged out.",
+                icon: "success"
+            });
+        })
+        .catch(error => {
+            Swal.fire("Error", "Logout not successful: " + error.message, "error");
+        });
     }
+    
 
     const menu = <>
 
@@ -84,7 +106,7 @@ const Mainlayout = () => {
                                 <li className="text-orange-500">
                                     <span className="font-semibold">{user?.displayName ? user.displayName : "MR. XYZ"}</span>
                                 </li>
-                                <li className=" border rounded btn btn-sm flex justify-center items-center text-white bg-orange-600 "><NavLink onClick={handelLogout} className={({ isActive, isPending }) =>
+                                <li className="  border rounded btn btn-sm flex justify-center items-center text-white bg-orange-600 "><NavLink onClick={handelLogout} className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "  " : ""
                                 }><IoMdLogIn />Logout
                                 </NavLink>
@@ -96,7 +118,7 @@ const Mainlayout = () => {
 
 
                 </> : <>
-                    <li className="text-white btn btn-sm flex justify-center items-center border rounded bg-orange-600"><NavLink to='/login' className={({ isActive, isPending }) =>
+                    <li className="text-white button1 btn btn-sm flex justify-center items-center border rounded bg-orange-600"><NavLink to='/login' className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "  text-black" : ""
                     }><IoMdLogIn />Join
                     </NavLink>

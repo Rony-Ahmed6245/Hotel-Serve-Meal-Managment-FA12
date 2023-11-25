@@ -65,28 +65,28 @@ const Register = () => {
 
 
     return (
-        <div>
+        <div className='bg-gradient-to-r from-amber-300 via-orange-500 to-orange-600  h-screen h-100vh'>
             <div>
                 {/* dynamic title  */}
              
-                <div className=" max-w-7xl mx-auto">
+                <div className=" max-w-xl mx-auto p-4">
                     {/* <img src={img3} alt="" /> */}
-                    <h1 className="text-4xl font-extrabold text-center my-8 text-[#0DBC95]">REGISTER</h1>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 p-4 justify-center items-center">
+                    
+                    <div className="">
 
-                        <div className=" rounded-lg">
-                            <h1 className="text-4xl font-extrabold text-center my-8 text-[#0DBC95]">Please Register & Find jobs</h1>
+                        <div className=" rounded-lg  form-container">
+                        <h1 className="text-4xl font-extrabold text-center my-8 ">REGISTER</h1>
                             <form onSubmit={handelRegister} className="card-body px-4 ">
-                                <div className="form-control">
+                                <div className="form-control form-group">
                                     <input type="text" placeholder="Name" name='name' className="w-full py-2 px-4  border-b-2 border-[#0DBC95] rounded outline-none" required />
                                 </div>
-                                <div className="form-control">
+                                <div className="form-control form-group">
                                     <input type="email" placeholder="Email" name='email' className="w-full py-2 px-4  border-b-2 border-[#0DBC95] rounded outline-none my-4" required />
                                 </div>
-                                <div className="form-control">
+                                <div className="form-control form-group">
                                     <input type="text" placeholder="Photo URL" name='Photo' className="w-full py-2 px-4  border-b-2 border-[#0DBC95] rounded outline-none my-4" />
                                 </div>
-                                <div className="form-control">
+                                <div className="form-control form-group">
                                     <input type="password" name='password' placeholder="Password" className="w-full py-2 px-4  border-b-2 border-[#0DBC95] rounded outline-none" required />
                                 </div>
                                 <h1 className="text-sm p-2">Forget Password</h1>
@@ -112,17 +112,15 @@ const Register = () => {
                                     </div>
                                 )}
                                 <div className="flex justify-center">
-                                    <button className="py-2 px-20 hover:bg-[#0DBC95] border-[#0DBC95] border-2 outline-none transition rounded-full  hover:text-white">Register</button>
+                                    <button className="py-2 px-20 hover:bg-orange-600 font-bold border-orange-600 border-2 outline-none transition rounded-full  hover:text-white">Register</button>
                                 </div>
 
                             </form>
-                            <h2 className="text-center text-lg font-semibold">Already have an Account ? Please <Link to='/login' className="text-[#0DBC95] underline">Login</Link> </h2>
+                            <h2 className="text-center text-lg font-semibold">Already have an Account ? Please <Link to='/login' className="text-blue-600 underline">Login</Link> </h2>
 
 
                         </div>
-                        <div className="flex justify-center">
-                            {/* <img src={img1} className=" " /> */}
-                        </div>
+                        
                     </div>
                 </div>
             </div>
