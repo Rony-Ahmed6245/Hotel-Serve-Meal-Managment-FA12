@@ -28,6 +28,7 @@ export const Routes = createBrowserRouter([
     {
         path: '/',
         element: <Mainlayout></Mainlayout>,
+        loader:  () =>  fetch('http://localhost:5000/v1/production'),
         errorElement: <ErroePage></ErroePage>,
         children: [
             {
@@ -38,10 +39,12 @@ export const Routes = createBrowserRouter([
             {
                 path: '/meals',
                 element: <Meals></Meals>,
+                loader:  () =>  fetch('http://localhost:5000/v1/production')
             },
             {
                 path: '/upcommingMeals',
                 element: <HomeUp></HomeUp>,
+                loader:  () =>  fetch('http://localhost:5000/v1/meals')
             },
             {
                 path: '/notificaton',
@@ -70,7 +73,7 @@ export const Routes = createBrowserRouter([
         {
             path:'/dashboard',
             element:<DashboardHome></DashboardHome>,
-            loader:  () =>  fetch('http://localhost:5000/v1/meals'),
+            loader:  () =>  fetch('http://localhost:5000/v1/meals')
         },
         {
             path:'userProfile',

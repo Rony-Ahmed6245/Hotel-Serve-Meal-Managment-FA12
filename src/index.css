@@ -486,3 +486,20 @@
 .input_field[type=number] {
   -moz-appearance: textfield;
 }
+
+
+
+.input1 {
+  color: #EA580C;
+  border: 2px solid #EA580C;
+  border-radius: 10px;
+  padding: 10px 25px;
+  background: transparent;
+  max-width: 490px;
+  width: 300px;
+ }
+ 
+ .input1:active {
+  box-shadow: 2px 2px 15px #EA580C inset;
+ }
+ 

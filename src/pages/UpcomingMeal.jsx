@@ -1,5 +1,4 @@
 import { useLoaderData } from "react-router-dom";
-import MealTable from "../components/MealTable";
 import UpMealTable from "../components/UpMealTable";
 
 

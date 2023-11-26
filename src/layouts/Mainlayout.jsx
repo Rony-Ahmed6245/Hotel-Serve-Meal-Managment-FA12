@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useLoaderData } from "react-router-dom";
 import { MdOutlineTextsms } from "react-icons/md";
 import { MdOutlineDashboard } from "react-icons/md";
 import { GiHotMeal, GiMeal } from "react-icons/gi";
@@ -10,12 +10,12 @@ import { AuthContext } from "../provider/AuthProvider";
 import { Avatar } from "keep-react";
 import { CgProfile } from "react-icons/cg";
 import { IoIosArrowRoundForward } from "react-icons/io";
-
-import swal from "sweetalert";
 import Swal from "sweetalert2";
 
 
 const Mainlayout = () => {
+    const data = useLoaderData([])
+   
     const [showDropdown, setShowDropdown] = useState(false);
     const { user, logOut } = useContext(AuthContext)
 
@@ -29,26 +29,26 @@ const Mainlayout = () => {
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, Logout"
         })
-        .then(result => {
-            if (result.isConfirmed) {
-                return logOut();
-            } else {
-                // The user clicked the cancel button
-                throw new Error('Logout canceled');
-            }
-        })
-        .then(() => {
-            Swal.fire({
-                title: "Logged Out!",
-                text: "You have been successfully logged out.",
-                icon: "success"
+            .then(result => {
+                if (result.isConfirmed) {
+                    return logOut();
+                } else {
+                    // The user clicked the cancel button
+                    throw new Error('Logout canceled');
+                }
+            })
+            .then(() => {
+                Swal.fire({
+                    title: "Logged Out!",
+                    text: "You have been successfully logged out.",
+                    icon: "success"
+                });
+            })
+            .catch(error => {
+                Swal.fire("Error", "Logout not successful: " + error.message, "error");
             });
-        })
-        .catch(error => {
-            Swal.fire("Error", "Logout not successful: " + error.message, "error");
-        });
     }
-    
+
 
     const menu = <>
 
@@ -65,7 +65,12 @@ const Mainlayout = () => {
             Upcomming Meals</NavLink></li>
         <li className="text-orange-500"><NavLink to='/notificaton' className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "  text-black" : ""
-        }><MdOutlineTextsms />Notification</NavLink></li>
+        }><MdOutlineTextsms />
+            <div className="indicator">
+                <span className="indicator-item badge bg-red-500 text-white">{data.length}</span>
+                Notification
+            </div>
+        </NavLink></li>
         <li className="text-orange-500"><NavLink to='/dashboard' className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "  text-black" : ""
         }><MdOutlineDashboard />Dashboard
