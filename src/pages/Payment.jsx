@@ -36,9 +36,9 @@ const Payment = () => {
       {/* Display payment details or any other content */}
 
       <div className="md:flex justify-center items-start gap-20">
-      
-        <div className="flex-grow  ">
-        
+
+        <div className="flex-grow border rounded ">
+
           <div className="p-8 bg-base-200 rounded space-y-2 mb-20 ">
             <div className="flex justify-between items-center">
               <h1 className="text-xl font-bold">Subtotal package(1)</h1>
@@ -54,63 +54,57 @@ const Payment = () => {
               <h1 className="text-xl font-bold">${price}</h1>
             </div>
           </div>
-          <div className="md:flex gap-10">
-            
-            <div>
-              <Label value="Label" />
-              <TextInput
-                id="#id-17"
-                placeholder="Default Input Field"
-                color="gray"
-                className="w-full"
-              />
-            </div>
-            <div>
-              <Label value="Label" />
-              <TextInput
-                id="#id-17"
-                placeholder="Default Input Field"
-                color="gray"
-                className="w-full"
-              />
-            </div>
-            <div>
-              <Label value="Label" />
-              <TextInput
-                id="#id-17"
-                placeholder="Default Input Field"
-                color="gray"
-                className="w-full"
-              />
-            </div>
+          <div className=" md:m-20 m-4 ">
+            <div className="md:flex gap-10">
 
+              <div>
+                <Label value="Card holder full name" className="input_label" />
+                <TextInput
+                  id="#id-17"
+                  placeholder="Enter your full name"
+                  color="gray"
+                  className="w-full"
+                />
+              </div>
+              <div>
+                <Label value="Card Number" className="input_label" />
+                <TextInput
+                  id="#id-17"
+                  placeholder="0000 0000 0000 0000"
+                  color="gray"
+                  className="w-full"
+                />
+              </div>
+
+
+            </div>
+            <Label value="Expiry Date" className="input_label" />
+            <TextInput
+              id="#id-17"
+              placeholder="1/23"
+              color="gray"
+              className="w-full input_field"
+            />
+            <Label value="CVV" className="input_label" />
+            <TextInput
+              id="#id-17"
+              placeholder="CVV"
+              color="gray"
+              className="w-full input_field"
+            />
           </div>
-          <Label value="Label" />
-          <TextInput
-            id="#id-17"
-            placeholder="Default Input Field"
-            color="gray"
-            className="w-full"
-          />
-          <Label value="Label" />
-          <TextInput
-            id="#id-17"
-            placeholder="Default Input Field"
-            color="gray"
-            className="w-full"
-          />
 
 
 
-<div className="my-10">
-          <div className="flip-card">
-            <div className="flip-card-inner">
-              <div className="flip-card-front">
-                <p className="heading_8264">MASTERCARD</p>
-                <svg className="logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="36" height="36" viewBox="0 0 48 48">
-                  <path fill="#ff9800" d="M32 10A14 14 0 1 0 32 38A14 14 0 1 0 32 10Z"></path><path fill="#d50000" d="M16 10A14 14 0 1 0 16 38A14 14 0 1 0 16 10Z"></path><path fill="#ff3d00" d="M18,24c0,4.755,2.376,8.95,6,11.48c3.624-2.53,6-6.725,6-11.48s-2.376-8.95-6-11.48 C20.376,15.05,18,19.245,18,24z"></path>
-                </svg>
-                <svg version="1.1" className="chip" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns: xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 50 50" xml: space="preserve">  <image id="image0" width="50" height="50" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+          <div className="my-10 flex justify-center items-center ">
+            <div className="flip-card">
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <p className="heading_8264">MASTERCARD</p>
+                  <svg className="logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="36" height="36" viewBox="0 0 48 48">
+                    <path fill="#ff9800" d="M32 10A14 14 0 1 0 32 38A14 14 0 1 0 32 10Z"></path><path fill="#d50000" d="M16 10A14 14 0 1 0 16 38A14 14 0 1 0 16 10Z"></path><path fill="#ff3d00" d="M18,24c0,4.755,2.376,8.95,6,11.48c3.624-2.53,6-6.725,6-11.48s-2.376-8.95-6-11.48 C20.376,15.05,18,19.245,18,24z"></path>
+                  </svg>
+                  <svg version="1.1" className="chip" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns: xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 50 50" xml: space="preserve">  <image id="image0" width="50" height="50" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
               AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAB6VBMVEUAAACNcTiVeUKVeUOY
               fEaafEeUeUSYfEWZfEaykleyklaXe0SWekSZZjOYfEWYe0WXfUWXe0WcgEicfkiXe0SVekSXekSW
               ekKYe0a9nF67m12ZfUWUeEaXfESVekOdgEmVeUWWekSniU+VeUKVeUOrjFKYfEWliE6WeESZe0GS
@@ -136,8 +130,8 @@ const Payment = () => {
               cmVhdGUAMjAyMy0wMi0xM1QwODoxNToyOSswMDowMEUnN7UAAAAldEVYdGRhdGU6bW9kaWZ5ADIw
               MjMtMDItMTNUMDg6MTU6MjkrMDA6MDA0eo8JAAAAKHRFWHRkYXRlOnRpbWVzdGFtcAAyMDIzLTAy
               LTEzVDA4OjE1OjI5KzAwOjAwY2+u1gAAAABJRU5ErkJggg=="></image>
-                </svg>
-                <svg version="1.1" className="contactless" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns: xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 50 50" xml: space="preserve">  <image id="image0" width="50" height="50" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAQAAAC0NkA6AAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+                  </svg>
+                  <svg version="1.1" className="contactless" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns: xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 50 50" xml: space="preserve">  <image id="image0" width="50" height="50" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAQAAAC0NkA6AAAABGdBTUEAALGPC/xhBQAAACBjSFJN
               AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZ
               cwAACxMAAAsTAQCanBgAAAAHdElNRQfnAg0IEzgIwaKTAAADDklEQVRYw+1XS0iUURQ+f5qPyjQf
               lGRFEEFK76koKGxRbWyVVLSOgsCgwjZBJJYuKogSIoOonUK4q3U0WVBWFPZYiIE6kuArG3VGzK/F
@@ -157,25 +151,26 @@ const Payment = () => {
               MTNUMDg6MTk6NTYrMDA6MDCjlq7LAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIzLTAyLTEzVDA4OjE5
               OjU2KzAwOjAw0ssWdwAAACh0RVh0ZGF0ZTp0aW1lc3RhbXAAMjAyMy0wMi0xM1QwODoxOTo1Nisw
               MDowMIXeN6gAAAAASUVORK5CYII="></image>
-                </svg>
-                <p className="number">9759 2484 5269 6576</p>
-                <p className="valid_thru">VALID THRU</p>
-                <p className="date_8264">1 2 / 2 4</p>
-                <p className="name">BRUCE WAYNE</p>
-              </div>
-              <div className="flip-card-back">
-                <div className="strip"></div>
-                <div className="mstrip"></div>
-                <div className="sstrip">
-                  <p className="code">***</p>
+                  </svg>
+                  <p className="number">9759 2484 5269 6576</p>
+                  <p className="valid_thru">VALID THRU</p>
+                  <p className="date_8264">1 2 / 2 4</p>
+                  <p className="name">BRUCE WAYNE</p>
+                </div>
+                <div className="flip-card-back">
+                  <div className="strip"></div>
+                  <div className="mstrip"></div>
+                  <div className="sstrip">
+                    <p className="code">***</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        </div>
+
         <div className="flex-2 ">
-          
+
           <Card className="max-w-xs p-6  bg-base-200 hover:shadow-md transition-all">
             <Card.Container>
               <Card.Container className="h-[60px] w-[60px]  bg-primary-25 flex items-center justify-center rounded-full">
