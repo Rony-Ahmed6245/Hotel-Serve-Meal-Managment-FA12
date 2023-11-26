@@ -3,7 +3,6 @@ import Mainlayout from "../layouts/Mainlayout";
 import ErroePage from "../pages/ErroePage";
 import Home from "../pages/Home";
 import Meals from "../pages/Meals";
-import UpcommingMeals from "../pages/UpcommingMeals";
 import Notification from "../pages/Notification";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
@@ -17,10 +16,11 @@ import Addmeal from "../pages/Addmeal";
 import AllMeals from "../pages/AllMeals";
 import AllReviews from "../pages/AllReviews";
 import ServeMeals from "../pages/ServeMeals";
-import UpcomingMeals from "../pages/UpcomingMeals";
 import Payment from "../pages/Payment";
 import DashboardHome from "../pages/DashboardHome";
 import PrivateRoute from "./PrivateRoute";
+import UpcomingMeal from "../pages/UpcomingMeal";
+import HomeUp from "../pages/HomeUp";
 
 
 
@@ -41,7 +41,7 @@ export const Routes = createBrowserRouter([
             },
             {
                 path: '/upcommingMeals',
-                element: <UpcommingMeals></UpcommingMeals>,
+                element: <HomeUp></HomeUp>,
             },
             {
                 path: '/notificaton',
@@ -70,6 +70,7 @@ export const Routes = createBrowserRouter([
         {
             path:'/dashboard',
             element:<DashboardHome></DashboardHome>,
+            loader:  () =>  fetch('http://localhost:5000/v1/meals'),
         },
         {
             path:'userProfile',
@@ -87,6 +88,7 @@ export const Routes = createBrowserRouter([
         {
             path:'adminProfile',
             element:<AdminProfile></AdminProfile>,
+            loader:  () =>  fetch('http://localhost:5000/v1/meals'),
         },
         {
             path:'manageUsers',
@@ -111,7 +113,8 @@ export const Routes = createBrowserRouter([
         },
         {
             path:'upcomingMeals',
-            element:<UpcomingMeals></UpcomingMeals>
+            element:<UpcomingMeal></UpcomingMeal>,
+            loader:  () =>  fetch('http://localhost:5000/v1/meals'),
         }
         ]
     }

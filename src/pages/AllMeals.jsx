@@ -4,7 +4,7 @@ import MealTable from "../components/MealTable";
 
 const AllMeals = () => {
     const data = useLoaderData([]);
-    console.log(data);
+    // console.log(data);
 
     return (
         <div>
@@ -26,7 +26,7 @@ const AllMeals = () => {
                     </thead>
                     {/* body */}
                     <tbody>
-                        {data.map((item, index) => (
+                        {data?.map((item, index) => (
                             <MealTable key={item._id} item={item} index={index + 1}></MealTable>
                         ))}
                     </tbody>

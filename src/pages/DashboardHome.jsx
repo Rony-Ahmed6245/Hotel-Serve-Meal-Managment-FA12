@@ -1,4 +1,5 @@
 import { BarChart } from "keep-react";
+import { useLoaderData } from "react-router-dom";
 
 
 const BarChartData = [
@@ -31,17 +32,18 @@ const BarChartData = [
 ];
 
 const DashboardHome = () => {
+    const data = useLoaderData([])
     return (
         <div className="p-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
                 <div className="newmor flex bg-blue-600 justify-center items-center text-white rounded h-32">
-                    <h1 className="text-center text-4xl font-bold">All user: 04</h1> 
+                    <h1 className="text-center text-4xl font-bold">All user: 00</h1> 
                 </div>
                 <div className="newmor flex justify-center bg-orange-600  items-center text-white rounded h-32">
-                    <h1 className="text-center text-4xl font-bold">All Meals: 06</h1> 
+                    <h1 className="text-center text-4xl font-bold">All Meals: {data?.length}</h1> 
                 </div>
                 <div className="newmor flex justify-center bg-green-600 items-center text-white rounded h-32">
-                    <h1 className="text-center text-4xl font-bold">All Reviews: 24</h1> 
+                    <h1 className="text-center text-4xl font-bold">All Reviews: 00</h1> 
                 </div>
                
                 

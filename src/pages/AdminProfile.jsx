@@ -5,6 +5,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { useContext } from "react";
 import { MdOutlineAdminPanelSettings } from "react-icons/md";
 import { BarChart } from "keep-react";
+import { useLoaderData } from "react-router-dom";
 
 
 const BarChartData = [
@@ -39,6 +40,7 @@ const BarChartData = [
 
 const AdminProfile = () => {
     const { user } = useContext(AuthContext)
+    const data = useLoaderData([]);
     console.log(user);
     return (
         <div className="p-10">
@@ -62,7 +64,7 @@ const AdminProfile = () => {
                         
                     </Card.Container>
                     <div className="divider"></div>
-                 <h1 className="text-xl pb-4">Total Added Meals: 00 </h1>
+                 <h1 className="text-xl pb-4">Total Meals: {data.length}</h1>
                 </Card.Container>
             </Card>
             <div className="grid grid-cols-1 mt-5 md:grid-cols-2 justify-center items-center gap-4">
