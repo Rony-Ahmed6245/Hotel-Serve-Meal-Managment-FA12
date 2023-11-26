@@ -99,6 +99,7 @@ export const Routes = createBrowserRouter([
         {
             path:'allMeals',
             element:<AllMeals></AllMeals>,
+            loader:  () =>  fetch('http://localhost:5000/v1/meals'),
         },
         {
             path:'allReviews',

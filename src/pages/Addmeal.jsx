@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
+import Swal from "sweetalert2";
 
 
 
@@ -45,10 +46,11 @@ const {user} = useContext(AuthContext)
             .then((res) => res.json())
             .then((data) => {
               console.log(data);
+              Swal.fire("Meal Added successfully");
             });
         
+      form.reset();
       
-
     };
 
 
