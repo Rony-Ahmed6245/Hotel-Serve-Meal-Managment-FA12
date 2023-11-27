@@ -37,7 +37,7 @@ const FutureMeals = () => {
 
     return (
         <div className="max-w-7xl mx-auto p-2 pt-10">
-            <Title heading={'Future Meals'}></Title>
+            <Title heading={'All Future Meals'}></Title>
             {/* category btn */}
             <div className="md:flex justify-center items-center my-8 gap-4">
                 <button onClick={() => filterItem("All")} className="btn button1 text-white shadow bg-orange-600  rounded">
@@ -62,6 +62,11 @@ const FutureMeals = () => {
                     <FutureMealCard key={item._id} item={item}></FutureMealCard>
                 ))}
             </div>
+            <div className="flex justify-center items-center gap-5 mt-5 ">
+                <Link to={'/meals'} className="btn  btn-sm button1">All Ready Meals</Link>
+                <Link to={'/upcommingMeals'} className="btn btn-sm  button1">All Upcomming Meals</Link>
+            </div>
+           
         </div>
     );
 };

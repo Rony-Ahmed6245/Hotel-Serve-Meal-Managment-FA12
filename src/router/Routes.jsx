@@ -21,6 +21,7 @@ import DashboardHome from "../pages/DashboardHome";
 import PrivateRoute from "./PrivateRoute";
 import UpcomingMeal from "../pages/UpcomingMeal";
 import HomeUp from "../pages/HomeUp";
+import DetailsPage from "../pages/DetailsPage";
 
 
 
@@ -54,6 +55,16 @@ export const Routes = createBrowserRouter([
                 path: '/payment/:id',
                 element:<PrivateRoute><Payment></Payment></PrivateRoute> ,
                 
+            },
+            {
+                path:'/v1/details/:id',
+                element:<DetailsPage></DetailsPage>,
+                loader:  () =>  fetch('http://localhost:5000/v1/meals')
+            },
+            {
+                path:`/v1/productionMealDetails/:id`,
+                element:<DetailsPage></DetailsPage>,
+                loader:  () =>  fetch('http://localhost:5000/v1/production')
             }
         ]
     },
@@ -104,6 +115,11 @@ export const Routes = createBrowserRouter([
         {
             path:'allMeals',
             element:<AllMeals></AllMeals>,
+            loader:  () =>  fetch('http://localhost:5000/v1/meals'),
+        },
+        {
+            path:'dashMealDetails/:id',
+            element:<DetailsPage></DetailsPage>,
             loader:  () =>  fetch('http://localhost:5000/v1/meals'),
         },
         {

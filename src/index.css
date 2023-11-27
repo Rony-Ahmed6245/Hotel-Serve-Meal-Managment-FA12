@@ -491,12 +491,14 @@
 
 .input1 {
   color: #EA580C;
-  border: 2px solid #EA580C;
-  border-radius: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
   padding: 10px 25px;
   background: transparent;
   max-width: 490px;
   width: 300px;
+  height: 14px;
+  padding: 15px;
  }
  
  .input1:active {
