@@ -35,6 +35,8 @@ const FutureMeals = () => {
     }
 
 
+    
+
     return (
         <div className="max-w-7xl mx-auto p-2 pt-10">
             <Title heading={'All Future Meals'}></Title>
@@ -58,13 +60,13 @@ const FutureMeals = () => {
 
             {/* card  */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                {filteredMeals?.map(item => (
+                {filteredMeals?.slice(0, 4).map(item => (
                     <FutureMealCard key={item._id} item={item}></FutureMealCard>
                 ))}
             </div>
             <div className="flex justify-center items-center gap-5 mt-5 ">
-                <Link to={'/meals'} className="btn  btn-sm button1">All Ready Meals</Link>
-                <Link to={'/upcommingMeals'} className="btn btn-sm  button1">All Upcomming Meals</Link>
+                <Link to={'/meals'} className="btn  btn-sm button1">Ready Meals</Link>
+                <Link to={'/upcommingMeals'} className="btn btn-sm  button1">Upcomming Meals</Link>
             </div>
            
         </div>

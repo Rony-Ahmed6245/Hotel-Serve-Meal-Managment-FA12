@@ -13,7 +13,7 @@ import { AuthContext } from '../provider/AuthProvider';
 
 
 const Register = () => {
-   
+
     const { createUser } = useContext(AuthContext);
     const [registerError, setRegisterError] = useState()
     const [passwordError, setSetPasswordError] = useState()
@@ -30,9 +30,31 @@ const Register = () => {
         setSetPasswordError('')
         setUpperCaseErr('')
 
+
+
+
+
+
+
         const displayName = e.target.name.value;
+        const name = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
+        const role = "user"
+        const userData = { name, email,  role };
+        // console.log(userData);
+        fetch("http://localhost:5000/v1/users", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(userData),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+
+            })
         // console.log(name, email, password);
         if (password.length < 6) {
             // Password is too short
@@ -68,14 +90,14 @@ const Register = () => {
         <div className='bg-gradient-to-r from-amber-300 via-orange-500 to-orange-600  h-screen h-100vh'>
             <div>
                 {/* dynamic title  */}
-             
+
                 <div className=" max-w-xl mx-auto p-4">
                     {/* <img src={img3} alt="" /> */}
-                    
+
                     <div className="">
 
                         <div className=" rounded-lg  form-container">
-                        <h1 className="text-4xl font-extrabold text-center my-8 ">REGISTER</h1>
+                            <h1 className="text-4xl font-extrabold text-center my-8 ">REGISTER</h1>
                             <form onSubmit={handelRegister} className="card-body px-4 ">
                                 <div className="form-control form-group">
                                     <input type="text" placeholder="Name" name='name' className="w-full py-2 px-4  border-b-2 border-[#0DBC95] rounded outline-none" required />
@@ -120,7 +142,7 @@ const Register = () => {
 
 
                         </div>
-                        
+
                     </div>
                 </div>
             </div>

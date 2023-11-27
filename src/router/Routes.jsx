@@ -79,6 +79,7 @@ export const Routes = createBrowserRouter([
     {
         path: '/dashboard',
         element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute> ,
+       
         children: [
         //    user profile routes
         {
@@ -107,6 +108,7 @@ export const Routes = createBrowserRouter([
         {
             path:'manageUsers',
             element:<ManageUsers></ManageUsers>,
+            loader:  () =>  fetch('http://localhost:5000/v1/users'),
         },
         {
             path:'addMeal',

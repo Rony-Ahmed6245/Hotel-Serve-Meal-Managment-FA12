@@ -99,7 +99,7 @@ const {user} = useContext(AuthContext)
                                 <span className="label-text">Price</span>
                             </label>
 
-                            <input type="number" name="price" placeholder="price" className="py-2 p-2 rounded design outline-none border" required />
+                            <input type="number" max={200} name="price" placeholder="price max 200" className="py-2 p-2 rounded design outline-none border" required />
 
 
                         </div>
