@@ -4,7 +4,7 @@ import ManageUserTable from "../components/ManageUserTable";
 
 const ManageUsers = () => {
      const data = useLoaderData([]);
-     console.log(data);
+    //  console.log(data);
     return (
         <div>
               <div className="overflow-x-auto p-8">

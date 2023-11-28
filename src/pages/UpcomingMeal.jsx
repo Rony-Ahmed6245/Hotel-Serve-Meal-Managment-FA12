@@ -4,10 +4,8 @@ import UpMealTable from "../components/UpMealTable";
 
 const UpcomingMeal = () => {
     const data = useLoaderData([]);
-
     const filterItem = data.filter(item => item.type === "upcoming")
-
-    console.log(data);
+    // console.log(data);
 
     return (
         <div>

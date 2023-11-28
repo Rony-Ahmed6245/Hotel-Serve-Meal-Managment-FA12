@@ -8,11 +8,11 @@ const FutureMealCard = ({ item }) => {
     const { _id, name, email, mealTitle, price, photo, rating, category, type, dsc, ing, currentDate } = item || {}
 
     const convertedRating = parseInt(rating, 10);
-    console.log(rating);
+    // console.log(rating);
     return (
         <div>
             <div className="shadow hover:shadow-2xl transition-all rounded-sm ">
-                <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                <figure><img src={ photo} alt="Shoes" /></figure>
                 <div className="p-5 space-y-4">
                     <h2 className="card-title">{mealTitle}</h2>
                     <p className="text-black text-md font-semibold">Price ${price}</p>

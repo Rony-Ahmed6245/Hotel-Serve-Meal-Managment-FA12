@@ -106,7 +106,8 @@ const Mainlayout = () => {
                         {showDropdown && (
                             <ul className="absolute top-14 right-0 bg-white border w-[200px] rounded-md shadow-md p-2 transition-all ">
                                 <li className="text-orange-500">
-                                    <NavLink to="/dashboard/userProfile"><CgProfile />Profile<IoIosArrowRoundForward /></NavLink>
+                                    {user.email === 'admin55@gmail.com'? <NavLink to="/dashboard/adminProfile"><CgProfile />Profile<IoIosArrowRoundForward /></NavLink> : <NavLink to="/dashboard/userProfile"><CgProfile />Profile<IoIosArrowRoundForward /></NavLink>}
+                                    
                                 </li>
                                 <li className="text-orange-500">
                                     <span className="font-semibold">{user?.displayName ? user.displayName : "MR. XYZ"}</span>
@@ -147,7 +148,7 @@ const Mainlayout = () => {
                 <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col">
                     {/* Navbar */}
-                    <div className="  navbar rounded-full mt-2 fixed z-10  bg-white  ">
+                    <div className="   navbar rounded-full   bg-white  ">
                         <div className="flex-none lg:hidden">
                             <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
@@ -169,7 +170,7 @@ const Mainlayout = () => {
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-2/3 min-h-full -ml-2 bg-white mt-20">
+                    <ul className="menu p-4 sm:w-2/3 md:w-2/3 lg:full min-h-full -ml-2 bg-white ">
                         {/* Sidebar content here */}
                         {menu}
                     </ul>

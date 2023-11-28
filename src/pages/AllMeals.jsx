@@ -15,13 +15,14 @@ const AllMeals = () => {
                         <tr className="bg-orange-500 text-white">
                             <th></th>
                             <th>Meal title</th>
+                            <th>Price</th>
                             <th>Number of Like</th>
                             <th>Number of Review</th>
                             <th>Distributor Name</th>
                             <th>Distributor Email</th>
-                            <th>Meal delete</th>
-                            <th>Meal update</th>
-                            <th>Meal view</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     {/* body */}

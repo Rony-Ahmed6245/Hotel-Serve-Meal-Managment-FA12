@@ -33,7 +33,7 @@ const {user} = useContext(AuthContext)
         const currentDate = new Date().toDateString();
 
         const formData = { name, email, mealTitle, price, photo, rating, category, type, dsc, ing, currentDate };
-        console.log(formData);
+        // console.log(formData);
 
 
         fetch("http://localhost:5000/v1/meals", {

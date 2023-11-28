@@ -14,7 +14,7 @@ const UpMealCard = ({ item }) => {
     return (
         <div>
             <div className="card card-side  shadow border-orange-400 border-2 ">
-                <figure><img className="md:w-[200px] w-[100px]" src={photo} alt="Movie" /></figure>
+                <figure><img className="" src={photo} alt="Movie" /></figure>
                 <div className="card-body">
                     <h2 className="text-2xl uppercase font-bold">{mealTitle}</h2>
                     <p className="text-md text-gray-400">{ing}</p>

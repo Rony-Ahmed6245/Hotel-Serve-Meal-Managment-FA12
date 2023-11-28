@@ -22,6 +22,7 @@ import PrivateRoute from "./PrivateRoute";
 import UpcomingMeal from "../pages/UpcomingMeal";
 import HomeUp from "../pages/HomeUp";
 import DetailsPage from "../pages/DetailsPage";
+import Update from "../components/Update";
 
 
 
@@ -135,6 +136,11 @@ export const Routes = createBrowserRouter([
         {
             path:'upcomingMeals',
             element:<UpcomingMeal></UpcomingMeal>,
+            loader:  () =>  fetch('http://localhost:5000/v1/meals'),
+        },
+        {
+            path:'/dashboard/update/:id',
+            element:<Update></Update>,
             loader:  () =>  fetch('http://localhost:5000/v1/meals'),
         }
         ]

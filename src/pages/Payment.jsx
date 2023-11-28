@@ -27,7 +27,7 @@ const Payment = () => {
   }, [id]);
 
   const filterItem = data.find((item) => item._id == id);
-  console.log(filterItem);
+  // console.log(filterItem);
   const { keyf1, keyf2, keyf3, keyf4, keyf5, keyf6, price, badge
   } = filterItem || {}
 
@@ -233,7 +233,6 @@ const Payment = () => {
                   </span>
                 </Card.List>
               </Card.Container>
-
             </Card.Container>
           </Card>
         </div>

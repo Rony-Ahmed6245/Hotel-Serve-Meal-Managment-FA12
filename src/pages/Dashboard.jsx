@@ -17,15 +17,15 @@ import { AuthContext } from "../provider/AuthProvider";
 
 const Dashboard = () => {
     const { user } = useContext(AuthContext);
-    console.log(user.email);
+    // console.log(user.email);
    
     const finddata =  user.email === 'admin55@gmail.com';
 
-    console.log(finddata.email);
+    // console.log(finddata.email);
 
     const dashboardMenu = (
         <>
-            <li className=' md:text-white text-orange-500'><NavLink to='/' className={({ isActive, isPending }) =>
+            <li className=' md:text-white text-orange-500 '><NavLink to='/' className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "underline" : ""
             }><IoHomeOutline />
                 Go Home</NavLink></li>
@@ -34,7 +34,7 @@ const Dashboard = () => {
             {finddata ? (
                 <>
                     {/* admin dashboard  */}
-                    <h1 className="text-lg underline font-semibold md:text-white text-orange-500 text-center">Admin Dashboard</h1>
+                    <h1 className="text-lg underline font-semibold text-orange-500 md:text-white">Admin Dashboard</h1>
                     <li className=' md:text-white text-orange-500'><NavLink to='/dashboard/adminProfile' className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "underline" : ""
                     }><RiAdminLine />
@@ -71,7 +71,7 @@ const Dashboard = () => {
                 </>
             ) : (
                 <>
-                    <h1 className="text-lg underline font-semibold text-white text-center">User Dashboard</h1>
+                    <h1 className="text-lg underline font-semibold text-orange-500 md:text-white">User Dashboard</h1>
                     <li className=' md:text-white text-orange-500'><NavLink to='/dashboard/userProfile' className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "underline" : ""
                     }><CgProfile />
@@ -103,7 +103,7 @@ const Dashboard = () => {
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-                    <ul className="menu p-4 md:w-80 z-30 w-3/4 min-h-full md:bg-orange-600 bg-white text-base-content">
+                    <ul className="menu p-4 md:w-80 z-50 0 w-3/4 min-h-full md:bg-orange-600 bg-white text-base-content">
                         {/* Sidebar content here */}
                         {dashboardMenu}
                     </ul>

@@ -3,21 +3,17 @@ import StarRatings from "react-star-ratings";
 
 
 const ProductionMeal = ({ item }) => {
-    console.log(item);
+    // console.log(item);
     const { _id, name, email, mealTitle, price, photo, rating, category, type, dsc, ing, currentDate } = item || {}
     const convertedRating = parseInt(rating, 10);
     return (
         <div>
             <div className="shadow hover:shadow-2xl transition-all rounded-sm ">
-                <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                <figure><img src={photo} alt="Shoes" /></figure>
                 <div className="p-5 space-y-4">
                     <h2 className="card-title">{mealTitle}</h2>
                     <p className="text-black text-md font-semibold">Price ${price}</p>
-
-
                     <div className="flex justify-between">
-
-
                         <StarRatings
                             rating={convertedRating}
                             starDimension="30px"
@@ -25,8 +21,7 @@ const ProductionMeal = ({ item }) => {
                             className="text-red-600 bg-red-500"
                             starRatedColor="#EB631C"
                         />
-
-                        <Link to={`/v1/productionMealDetails/${_id}`}className="btn btn-sm btn-outline border-orange-300 hover:bg-orange-600">Details</Link>
+                        <Link to={`/v1/productionMealDetails/${_id}`} className="btn btn-sm btn-outline border-orange-300 hover:bg-orange-600">Details</Link>
                     </div>
                 </div>
             </div>

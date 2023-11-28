@@ -41,7 +41,7 @@ const BarChartData = [
 const AdminProfile = () => {
     const { user } = useContext(AuthContext)
     const data = useLoaderData([]);
-    console.log(user);
+    // console.log(user);
     return (
         <div className="p-10">
             <Card
@@ -57,8 +57,7 @@ const AdminProfile = () => {
                         <Avatar size="2xl" shape="circle" img={user?.photoURL} />
                     </Card.Container>
                     <Card.Container className="mb-3 mt-10 text-center">
-                        <Card.Title className="   text-2xl"> {
-                            user ? user.displayName : 'MR. XYZ'
+                        <Card.Title className="   text-2xl ">{ user ? user.displayName : 'MR. XYZ'
                         }</Card.Title>
                         <Card.Title className="   text-sm text-orange-600 font-semibold flex justify-center items-center gap-1"><MdOutlineAdminPanelSettings />Admin</Card.Title>
                         
