@@ -1,4 +1,4 @@
-import { NavLink, Outlet, useLoaderData } from "react-router-dom";
+import { NavLink, Navigate, Outlet, useLoaderData, useNavigate } from "react-router-dom";
 import { MdOutlineTextsms } from "react-icons/md";
 import { MdOutlineDashboard } from "react-icons/md";
 import { GiHotMeal, GiMeal } from "react-icons/gi";
@@ -14,10 +14,11 @@ import Swal from "sweetalert2";
 
 
 const Mainlayout = () => {
-    const data = useLoaderData([])
-   
+    const data = useLoaderData([]);
     const [showDropdown, setShowDropdown] = useState(false);
     const { user, logOut } = useContext(AuthContext)
+
+
 
     const handelLogout = () => {
         Swal.fire({
@@ -63,14 +64,20 @@ const Mainlayout = () => {
             isPending ? "pending" : isActive ? " text-black" : ""
         }><GiHotMeal />
             Upcomming Meals</NavLink></li>
-        <li className="text-orange-500"><NavLink to='/notificaton' className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "  text-black" : ""
-        }><MdOutlineTextsms />
-            <div className="indicator">
-                <span className="indicator-item badge bg-red-500 text-white">{data.length}</span>
-                Notification
-            </div>
-        </NavLink></li>
+            <li className="text-orange-500">
+        <NavLink to={'/notificaton'}
+         
+          className={({ isActive, isPending }) =>
+            isPending ? 'pending' : isActive ? 'text-black' : ''
+          }
+        >
+          <MdOutlineTextsms />
+          <div className="indicator">
+            <span className="indicator-item badge bg-red-500 text-white">{data.length}</span>
+            Notification
+          </div>
+        </NavLink>
+      </li>
         <li className="text-orange-500"><NavLink to='/dashboard' className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "  text-black" : ""
         }><MdOutlineDashboard />Dashboard

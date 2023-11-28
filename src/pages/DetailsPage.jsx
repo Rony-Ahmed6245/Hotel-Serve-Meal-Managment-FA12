@@ -1,10 +1,15 @@
 
+import { useContext } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import StarRatings from "react-star-ratings";
+import { AuthContext } from "../provider/AuthProvider";
+import Swal from "sweetalert2";
 const DetailsPage = () => {
-
+    const { user } = useContext(AuthContext)
+    console.log(user);
 
     const data = useLoaderData([])
+    // console.log(data);
     const { id } = useParams()
     // console.log(id, data);
     const filterItem = data.find(item => item._id === id)
@@ -12,12 +17,39 @@ const DetailsPage = () => {
     // console.log(filterItem);
     const { _id, name, email, mealTitle, price, photo, rating, category, type, dsc, ing, currentDate } = filterItem || {}
     const convertedRating = parseInt(rating, 10);
+
+
+
+    const handelRequestMealUser = (mealTitle) => {
+        const email = user.email;
+        const fromData = { mealTitle, email }
+        console.log(fromData);
+        fetch("http://localhost:5000/v1/userMealRequest", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(fromData),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                Swal.fire("Meal Request successfully");
+            });
+    }
+
+    const handelRequest = () => {
+        Swal.fire("Login Fast to send Meal Request");
+    }
+
+
+
     return (
         <div className=" md:p-20 p-3  ">
 
 
             <div className="md:w-8/12 mx-auto w-full  bg-base-100 ">
-                <figure><img className="" src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                <figure><img className="" src={photo} alt="Shoes" /></figure>
 
             </div>
 
@@ -42,7 +74,13 @@ const DetailsPage = () => {
                         />
                         <div className="flex gap-2">
                             <button className="btn  button1 outline-none">Like</button>
-                            <button className="btn button1  outline-none">Request</button>
+                            {
+                                user ?
+                                    <button onClick={() => handelRequestMealUser(mealTitle)} className="btn button1  outline-none">Request</button>
+                                    :
+                                    <button onClick={handelRequest} className="btn  btn-error text-white outline-none">Request</button>
+                            }
+
                         </div>
                     </div>
                 </div>

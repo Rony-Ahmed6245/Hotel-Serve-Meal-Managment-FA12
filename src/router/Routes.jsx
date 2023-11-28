@@ -51,6 +51,7 @@ export const Routes = createBrowserRouter([
             {
                 path: '/notificaton',
                 element: <Notification></Notification>,
+                loader:  () =>  fetch('http://localhost:5000/v1/meals'),
             },
             {
                 path: '/payment/:id',
@@ -91,10 +92,12 @@ export const Routes = createBrowserRouter([
         {
             path:'userProfile',
             element:<UserProfile></UserProfile>,
+            loader:  () =>  fetch('http://localhost:5000/v1/mealRequestUser')
         },
         {
             path:'requestedMeals',
             element:<RequestedMeals></RequestedMeals>,
+            loader:  () =>  fetch('http://localhost:5000/v1/mealRequestUser')
         },
         {
             path:'myReviews',
@@ -132,6 +135,7 @@ export const Routes = createBrowserRouter([
         {
             path:'serveMeals',
             element:<ServeMeals></ServeMeals>,
+            loader:  () =>  fetch('http://localhost:5000/v1/mealRequestUser')
         },
         {
             path:'upcomingMeals',

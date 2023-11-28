@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 const Update = () => {
     const data = useLoaderData([]);
@@ -34,6 +35,7 @@ const Update = () => {
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
+                Swal.fire("Meal updated successfully");
                 // Handle the response as needed
             })
             .catch((error) => {

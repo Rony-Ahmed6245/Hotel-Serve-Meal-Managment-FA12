@@ -92,6 +92,9 @@ const Payment = () => {
               color="gray"
               className="w-full input_field"
             />
+            <div className="text-center mt-5">
+              <button className="btn btn-neutral">Pay</button>
+            </div>
           </div>
 
 

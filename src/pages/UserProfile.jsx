@@ -5,12 +5,17 @@ import banner from "../assets/banner.png"
 import { FcLike } from "react-icons/fc";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
+import { useLoaderData } from "react-router-dom";
 
 
 
 
 const UserProfile = () => {
     const { user } = useContext(AuthContext)
+    const data = useLoaderData([])
+    const filterData = data.filter(item =>item.email === user.email)
+    console.log(filterData);
+
     return (
         <div className="p-10">
               <Card
@@ -36,13 +41,13 @@ const UserProfile = () => {
             <Card.Title className="text-body-5 !font-normal text-metal-400 md:text-body-5 md:!font-medium">
               Request meal
             </Card.Title>
-            <Card.Title className="!text-body-1 !font-semibold text-metal-800">01</Card.Title>
+            <Card.Title className="!text-body-1 !font-semibold text-metal-800">{filterData.length}</Card.Title>
           </Card.Container>
           <Card.Container className="text-center">
             <Card.Title className="text-body-5 !font-normal text-metal-400 md:text-body-5 md:!font-medium">
               Review meal
             </Card.Title>
-            <Card.Title className="!text-body-1 !font-semibold text-metal-800">01</Card.Title>
+            <Card.Title className="!text-body-1 !font-semibold text-metal-800">00</Card.Title>
           </Card.Container>
           <Card.Container className="text-center">
             <Card.Title className="text-body-5 !font-normal text-metal-400 md:text-body-5 md:!font-medium">
