@@ -11,6 +11,7 @@ const UpcomingMeal = () => {
         <div>
             <div>
                 <div className="overflow-x-auto p-8">
+                <marquee className='bg-orange-500 text-white -mb-2 uppercase' direction="">Upcoming meals ready for production</marquee>
                     <table className="table table-zebra">
                         {/* head */}
                         <thead>

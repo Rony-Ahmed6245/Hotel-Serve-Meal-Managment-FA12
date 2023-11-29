@@ -22,21 +22,52 @@ const DetailsPage = () => {
 
     const handelRequestMealUser = (mealTitle) => {
         const email = user.email;
-        const fromData = { mealTitle, email }
+        const fromData = { mealTitle, email };
         console.log(fromData);
-        fetch("http://localhost:5000/v1/userMealRequest", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(fromData),
+    
+        Swal.fire({
+            title: "Are you sure?",
+            text: "Meal request send",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, request it!"
         })
-            .then((res) => res.json())
-            .then((data) => {
-                console.log(data);
-                Swal.fire("Meal Request successfully");
-            });
-    }
+        .then((result) => {
+            if (result.isConfirmed) {
+                // Make the POST request only if the user confirms
+                fetch("http://localhost:5000/v1/userMealRequest", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(fromData),
+                })
+                .then((res) => res.json())
+                .then((data) => {
+                    // Handle the response if needed
+                    Swal.fire({
+                        title: "Meal Requested!",
+                        text: "Your meal request has been sent.",
+                        icon: "success"
+                    });
+                })
+                .catch((error) => {
+                    console.error('Error requesting meal:', error);
+                    Swal.fire({
+                        title: "Error",
+                        text: "Error requesting meal.",
+                        icon: "error"
+                    });
+                });
+            }
+        });
+    };
+    
+
+
+
 
     const handelRequest = () => {
         Swal.fire("Login Fast to send Meal Request");

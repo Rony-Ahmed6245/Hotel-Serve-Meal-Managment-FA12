@@ -54,7 +54,7 @@ const Meals = () => {
             </div>
 
             {/* Display Meals */}
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 p-3 gap-4">
                 {totalItems === 0 ? (
                     <div>
                         <h1 className="text-center text-2xl">No meals found </h1>
