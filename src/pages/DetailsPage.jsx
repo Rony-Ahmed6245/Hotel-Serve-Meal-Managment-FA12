@@ -37,7 +37,7 @@ const DetailsPage = () => {
         .then((result) => {
             if (result.isConfirmed) {
                 // Make the POST request only if the user confirms
-                fetch("http://localhost:5000/v1/userMealRequest", {
+                fetch("https://final-assignment-12s.vercel.app/v1/userMealRequest", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",

@@ -43,7 +43,7 @@ const Register = () => {
         const role = "user"
         const userData = { name, email,  role };
         // console.log(userData);
-        fetch("http://localhost:5000/v1/users", {
+        fetch("https://final-assignment-12s.vercel.app/v1/users", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -9,7 +9,7 @@ const Banner = () => {
             <div className="hero min-h-screen mb-10" style={{ backgroundImage: `url(${banner})` }}>
                 <div className=""></div>
                 <div className=" text-left text-neutral-content px-4 pt-2 ">
-                    <div className="max-w-7xl md:w-6/12 w-full">
+                    <div className="md:max-w-7xl md:w-4/12 w-full">
                         <h1 className="mb-5 text-5xl font-bold uppercase">serve meal</h1>
                         <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                         <SearchBar

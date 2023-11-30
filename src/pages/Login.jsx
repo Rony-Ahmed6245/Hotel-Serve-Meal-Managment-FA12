@@ -115,7 +115,7 @@ const Login = () => {
                                 </div>
                             )
                         }
-                        <div className="flex justify-around item-center">
+                        <div className="md:flex justify-around item-center">
                             <div className="flex justify-center">
                                 <button className="py-2 px-20 hover:bg-orange-600 border-white border-2  text-white font-bold outline-none transition rounded-full  hover:text-white flex justify-center items-center gap-2"><CiLogin />Login</button>
                             </div>
@@ -125,7 +125,7 @@ const Login = () => {
                         </div>
 
                     </form>
-                    <h2 className="text-center text-lg font-semibold">Not a member ? Please <Link to='/register' className="text-white underline text-blue-400">Register</Link> </h2>
+                    <h2 className="text-center text-lg font-semibold">Not a member ? Please <Link to='/register' className="underline text-blue-400">Register</Link> </h2>
                     <h4 className="text-md text-center">OR</h4>
                     <div className="flex justify-center ">
                         <div onClick={handelGoogleSignIn} className="cursor-pointer flex items-center my-2 gap-3 justify-center w-[250px] border p-2 rounded-full">

@@ -30,28 +30,28 @@ export const Routes = createBrowserRouter([
     {
         path: '/',
         element: <Mainlayout></Mainlayout>,
-        loader:  () =>  fetch('http://localhost:5000/v1/production'),
+        loader:  () =>  fetch('https://final-assignment-12s.vercel.app/v1/production'),
         errorElement: <ErroePage></ErroePage>,
         children: [
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch("http://localhost:5000/v1/paymentCard"),
+                loader: () => fetch("https://final-assignment-12s.vercel.app/v1/paymentCard"),
             },
             {
                 path: '/meals',
                 element: <Meals></Meals>,
-                loader:  () =>  fetch('http://localhost:5000/v1/production')
+                loader:  () =>  fetch('https://final-assignment-12s.vercel.app/v1/production')
             },
             {
                 path: '/upcommingMeals',
                 element: <HomeUp></HomeUp>,
-                loader:  () =>  fetch('http://localhost:5000/v1/meals')
+                loader:  () =>  fetch('https://final-assignment-12s.vercel.app/v1/meals')
             },
             {
                 path: '/notificaton',
                 element: <Notification></Notification>,
-                loader:  () =>  fetch('http://localhost:5000/v1/meals'),
+                loader:  () =>  fetch('https://final-assignment-12s.vercel.app/v1/meals'),
             },
             {
                 path: '/payment/:id',
@@ -61,12 +61,12 @@ export const Routes = createBrowserRouter([
             {
                 path:'/v1/details/:id',
                 element:<DetailsPage></DetailsPage>,
-                loader:  () =>  fetch('http://localhost:5000/v1/meals')
+                loader:  () =>  fetch('https://final-assignment-12s.vercel.app/v1/meals')
             },
             {
                 path:`/v1/productionMealDetails/:id`,
                 element:<DetailsPage></DetailsPage>,
-                loader:  () =>  fetch('http://localhost:5000/v1/production')
+                loader:  () =>  fetch('https://final-assignment-12s.vercel.app/v1/production')
             }
         ]
     },
@@ -87,17 +87,17 @@ export const Routes = createBrowserRouter([
         {
             path:'/dashboard',
             element:<DashboardHome></DashboardHome>,
-            loader:  () =>  fetch('http://localhost:5000/v1/meals')
+            loader:  () =>  fetch('https://final-assignment-12s.vercel.app/v1/meals')
         },
         {
             path:'userProfile',
             element:<UserProfile></UserProfile>,
-            loader:  () =>  fetch('http://localhost:5000/v1/mealRequestUser')
+            loader:  () =>  fetch('https://final-assignment-12s.vercel.app/v1/mealRequestUser')
         },
         {
             path:'requestedMeals',
             element:<RequestedMeals></RequestedMeals>,
-            loader:  () =>  fetch('http://localhost:5000/v1/mealRequestUser')
+            loader:  () =>  fetch('https://final-assignment-12s.vercel.app/v1/mealRequestUser')
         },
         {
             path:'myReviews',
@@ -107,12 +107,12 @@ export const Routes = createBrowserRouter([
         {
             path:'adminProfile',
             element:<AdminProfile></AdminProfile>,
-            loader:  () =>  fetch('http://localhost:5000/v1/meals'),
+            loader:  () =>  fetch('https://final-assignment-12s.vercel.app/v1/meals'),
         },
         {
             path:'manageUsers',
             element:<ManageUsers></ManageUsers>,
-            loader:  () =>  fetch('http://localhost:5000/v1/users'),
+            loader:  () =>  fetch('https://final-assignment-12s.vercel.app/v1/users'),
         },
         {
             path:'addMeal',
@@ -121,12 +121,12 @@ export const Routes = createBrowserRouter([
         {
             path:'allMeals',
             element:<AllMeals></AllMeals>,
-            loader:  () =>  fetch('http://localhost:5000/v1/meals'),
+            loader:  () =>  fetch('https://final-assignment-12s.vercel.app/v1/meals'),
         },
         {
             path:'dashMealDetails/:id',
             element:<DetailsPage></DetailsPage>,
-            loader:  () =>  fetch('http://localhost:5000/v1/meals'),
+            loader:  () =>  fetch('https://final-assignment-12s.vercel.app/v1/meals'),
         },
         {
             path:'allReviews',
@@ -135,17 +135,17 @@ export const Routes = createBrowserRouter([
         {
             path:'serveMeals',
             element:<ServeMeals></ServeMeals>,
-            loader:  () =>  fetch('http://localhost:5000/v1/mealRequestUser')
+            loader:  () =>  fetch('https://final-assignment-12s.vercel.app/v1/mealRequestUser')
         },
         {
             path:'upcomingMeals',
             element:<UpcomingMeal></UpcomingMeal>,
-            loader:  () =>  fetch('http://localhost:5000/v1/meals'),
+            loader:  () =>  fetch('https://final-assignment-12s.vercel.app/v1/meals'),
         },
         {
             path:'/dashboard/update/:id',
             element:<Update></Update>,
-            loader:  () =>  fetch('http://localhost:5000/v1/meals'),
+            loader:  () =>  fetch('https://final-assignment-12s.vercel.app/v1/meals'),
         }
         ]
     }

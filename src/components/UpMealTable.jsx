@@ -15,7 +15,7 @@ const UpMealTable = ({ item, index }) => {
         const data = { name, email, mealTitle, price, photo, rating, category, type, dsc, ing, currentDate };
         // console.log(data);
         setIsButtonDisabled(false);
-        fetch("http://localhost:5000/v1/production", {
+        fetch("https://final-assignment-12s.vercel.app/v1/production", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -36,7 +36,7 @@ const DashboardHome = () => {
     const data = useLoaderData([])
     const [items, setItems] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/v1/production')
+        fetch('https://final-assignment-12s.vercel.app/v1/production')
         .then(res=>res.json())
         .then(data=>setItems(data))
     },[])

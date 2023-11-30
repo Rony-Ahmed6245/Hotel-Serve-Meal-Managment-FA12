@@ -10,7 +10,7 @@ const FutureMeals = () => {
     const [menuItems, setMenuItems] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/v1/meals')
+        fetch('https://final-assignment-12s.vercel.app/v1/meals')
             .then(res => res.json())
             .then(data => {
                 setMeals(data)

@@ -26,7 +26,7 @@ const MealTable = ({ item, index, onDelete }) => {
         setIsDeleting(true);
 
         try {
-          const response = await fetch(`http://localhost:5000/v1/meals/${_id}`, {
+          const response = await fetch(`https://final-assignment-12s.vercel.app/v1/meals/${_id}`, {
             method: "DELETE",
           });
 

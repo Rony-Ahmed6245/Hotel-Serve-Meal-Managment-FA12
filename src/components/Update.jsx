@@ -20,7 +20,7 @@ const Update = () => {
         e.preventDefault();
 
         // Update the backend using the fetch API
-        fetch(`http://localhost:5000/v1/meals/${id}`, {
+        fetch(`https://final-assignment-12s.vercel.app/v1/meals/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

@@ -15,7 +15,7 @@ const Payment = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/v1/paymentCard"); // Adjust the path based on your project structure
+        const response = await fetch("https://final-assignment-12s.vercel.app/v1/paymentCard"); // Adjust the path based on your project structure
         const jsonData = await response.json();
         setData(jsonData);
       } catch (error) {

@@ -10,7 +10,7 @@ const AllMeals = () => {
     // console.log(data);
     const fetchMeals = async () => {
         try {
-          const response = await fetch('http://localhost:5000/v1/meals');
+          const response = await fetch('https://final-assignment-12s.vercel.app/v1/meals');
           const data = await response.json();
           setMeals(data);
         } catch (error) {

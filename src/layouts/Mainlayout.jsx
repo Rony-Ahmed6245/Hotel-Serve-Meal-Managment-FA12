@@ -64,24 +64,21 @@ const Mainlayout = () => {
             isPending ? "pending" : isActive ? " text-black" : ""
         }><GiHotMeal />
             Upcomming Meals</NavLink></li>
-            <li className="text-orange-500">
-        <NavLink to={'/notificaton'}
-         
-          className={({ isActive, isPending }) =>
-            isPending ? 'pending' : isActive ? 'text-black' : ''
-          }
-        >
-          <MdOutlineTextsms />
-          <div className="indicator">
-            <span className="indicator-item badge bg-red-500 text-white">{data.length}</span>
-            Notification
-          </div>
-        </NavLink>
-      </li>
-        <li className="text-orange-500"><NavLink to='/dashboard' className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "  text-black" : ""
-        }><MdOutlineDashboard />Dashboard
-        </NavLink></li>
+        <li className="text-orange-500">
+            <NavLink to={'/notificaton'}
+
+                className={({ isActive, isPending }) =>
+                    isPending ? 'pending' : isActive ? 'text-black' : ''
+                }
+            >
+                <MdOutlineTextsms />
+                <div className="indicator">
+                    <span className="indicator-item badge bg-red-500 text-white">{data.length}</span>
+                    Notification
+                </div>
+            </NavLink>
+        </li>
+
 
         {/* login logout  */}
 
@@ -113,9 +110,13 @@ const Mainlayout = () => {
                         {showDropdown && (
                             <ul className="absolute top-14 right-0 bg-white border w-[200px] rounded-md shadow-md p-2 transition-all ">
                                 <li className="text-orange-500">
-                                    {user.email === 'admin55@gmail.com'? <NavLink to="/dashboard/adminProfile"><CgProfile />Profile<IoIosArrowRoundForward /></NavLink> : <NavLink to="/dashboard/userProfile"><CgProfile />Profile<IoIosArrowRoundForward /></NavLink>}
-                                    
+                                    {user.email === 'admin55@gmail.com' ? <NavLink to="/dashboard/adminProfile"><CgProfile />Profile<IoIosArrowRoundForward /></NavLink> : <NavLink to="/dashboard/userProfile"><CgProfile />Profile<IoIosArrowRoundForward /></NavLink>}
+
                                 </li>
+                                <li className="text-orange-500"><NavLink to='/dashboard' className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "  text-black" : ""
+                                }><MdOutlineDashboard />Dashboard
+                                </NavLink></li>
                                 <li className="text-orange-500">
                                     <span className="font-semibold">{user?.displayName ? user.displayName : "MR. XYZ"}</span>
                                 </li>

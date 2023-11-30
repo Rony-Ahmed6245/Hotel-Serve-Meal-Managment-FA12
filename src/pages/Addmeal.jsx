@@ -36,7 +36,7 @@ const {user} = useContext(AuthContext)
         // console.log(formData);
 
 
-        fetch("http://localhost:5000/v1/meals", {
+        fetch("https://final-assignment-12s.vercel.app/v1/meals", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
