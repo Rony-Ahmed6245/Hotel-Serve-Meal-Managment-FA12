@@ -1,14 +1,16 @@
 
 <div>
+<h3 align="center">---All necessary links---</h3>
 1. Assignment Category: assignment12_category_0013 <br/>
 2. Admin email: admin55@gmail.com <br/>
 3. Admin password: AdminadmiN&& <br/>
 4. Front-end Live Site Link: https://final-assignment-12f.netlify.app/ <br/>
 5. Client Side Github Repository Link: https://github.com/programming-hero-web-course1/b8a12-client-side-Rony-Ahmed6245.git <br/>
 6. Server Side Github Repository Link : https://github.com/programming-hero-web-course1/b8a12-server-side-Rony-Ahmed6245.git <br/> 
+            <h3 align="center">---Used Technology---</h3>
             <img src="https://i.ibb.co/tHfD5v8/final-assignment-12f-netlify-app.png" alt="" />
-            <h1>Add at least 5 Project features in my hotel management website</h1>
-            <h3>1/Feature: Website future ALL FUTURE MEALS </h3>
+            <h3 align="center">--- Project features in  hotel serve meal management website---</h3>
+            <h3>1/Feature: Website future ALL FUTURE MEALS </h3> 
             <img src="https://i.ibb.co/m97BpN2/Screenshot-2023-11-30-163947.png" alt="" />
             <p>Start with a fancy appetizer like stuffed mushrooms or bruschetta.
 For the main course, consider a gourmet dish such as lobster tail, filet mignon, or a vegetarian option like stuffed bell peppers.
