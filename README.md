@@ -1,6 +1,6 @@
 
 <div>
-1. Assignment Category: assignment12_category_0013
+1. Assignment Category: assignment12_category_0013 <br/>
 2. Admin email: admin55@gmail.com <br/>
 3. Admin password: AdminadmiN&& <br/>
 4. Front-end Live Site Link: https://final-assignment-12f.netlify.app/ <br/>
