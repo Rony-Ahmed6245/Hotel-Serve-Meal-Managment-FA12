@@ -8,6 +8,12 @@
 5. Client Side Github Repository Link: https://github.com/programming-hero-web-course1/b8a12-client-side-Rony-Ahmed6245.git <br/>
 6. Server Side Github Repository Link : https://github.com/programming-hero-web-course1/b8a12-server-side-Rony-Ahmed6245.git <br/> 
             <h3 align="center">---Used Technology---</h3>
+            1.React <br>
+            2.React Router dom <br>
+            3.Tailwind css & deyisUI <br>
+            4.MongoDB <br> 
+            5.NodeJS and <br>
+            6.ExpressJs etc <br> 
             <img src="https://i.ibb.co/tHfD5v8/final-assignment-12f-netlify-app.png" alt="" />
             <h3 align="center">--- Project features in  hotel serve meal management website---</h3>
             <h3>1/Feature: Website future ALL FUTURE MEALS </h3> 
