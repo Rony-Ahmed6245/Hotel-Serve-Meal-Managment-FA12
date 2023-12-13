@@ -14,6 +14,10 @@
             4.MongoDB <br> 
             5.NodeJS and <br>
             6.ExpressJs etc <br> 
+            <h3 align="center">---Unique feature---</h3>
+            i.Daily meal carousl section in the home page.  <br> 
+            ii.Graphical charts used in dashboard.  <br> 
+ <br> 
             <img src="https://i.ibb.co/tHfD5v8/final-assignment-12f-netlify-app.png" alt="" />
             <h3 align="center">--- Project features in  hotel serve meal management website---</h3>
             <h3>1/Feature: Website future ALL FUTURE MEALS </h3> 
