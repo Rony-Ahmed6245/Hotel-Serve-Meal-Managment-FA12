@@ -5,7 +5,7 @@
 2. Admin email: admin55@gmail.com <br/>
 3. Admin password: AdminadmiN&& <br/>
 4. Front-end Live Site Link: https://final-assignment-12f.netlify.app/ <br/>
-5. Client Side Github Repository Link: https://github.com/programming-hero-web-course1/b8a12-client-side-Rony-Ahmed6245.git <br/>
+5. Client Side Github Repository Link: https://github.com/Rony-Ahmed6245/Meal-serve-hotel-managment-FA12.git <br/>
 6. Server Side Github Repository Link : https://github.com/Rony-Ahmed6245/sarve-meal-12s.git <br/> 
             <h3 align="center">---Used Technology---</h3>
             1.React <br>
